@@ -1,0 +1,19 @@
+section {
+    background-color: #2C3E50;
+}
+
+.icons span {
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.special {
+    background-color: #1A252F;
+}

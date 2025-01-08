@@ -1,0 +1,35 @@
+<section class="my-5">
+  <div class="container min-vh-100 d-flex flex-column justify-content-center pt-5">
+    <h1 class="text-uppercase text-center fw-bolder">portfolio component</h1>
+    <app-decorator></app-decorator>
+    <div class="row">
+      @for (image of images; track $index) {
+      <div class="col-md-6 col-lg-4 g-3" (click)="openImage(image)">
+        <div
+          class="portfolio-img rounded d-flex justify-content-center align-items-center overflow-hidden"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <img [src]="image" class="w-100" alt="" />
+          <span
+            class="d-flex justify-content-center align-items-center text-white"
+            ><i class="fa-solid fa-plus fa-7x"></i
+          ></span>
+        </div>
+      </div>
+    }
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

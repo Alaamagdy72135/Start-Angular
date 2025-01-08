@@ -1,0 +1,11 @@
+.header-img {
+    width: 250px;
+}
+
+header {
+    background-color: #1ABC9C;
+}
+
+.decorator-color {
+    background-color: white !important;
+}
