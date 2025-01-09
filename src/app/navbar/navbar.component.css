@@ -7,3 +7,15 @@
   width: fit-content;
   padding: 10px;
 }
+
+.updateHeight {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.7s; 
+}
+
+.removeHeight {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  transition: all 0.7s; 
+}
