@@ -9,9 +9,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   @ViewChild('navbar') navbar!: ElementRef;
+  @ViewChild('navbarCollapse') navbarCol!: ElementRef;
   @HostListener('window:scroll', ['$event'])
   @HostListener('window:mouseout', ['$event'])
-  @HostListener('window:mouseenter', ['$event'])
   onWindowScroll() {
     if (window.scrollY > 0) {
       this.navbar.nativeElement.classList.remove('updateHeight');
@@ -23,7 +23,9 @@ export class NavbarComponent {
   }
   @ViewChild('navbarToggler') navbarToggler!: ElementRef;
   collapseNav() {
-    this.navbarToggler.nativeElement.click();
+    this.navbarToggler.nativeElement.setAttribute('aria-expanded', 'false');
+    this.navbarToggler.nativeElement.classList.add('collapsed');
+    this.navbarCol.nativeElement.classList.remove('show');    
   }
   ngAfterViewInit() {
     this.onWindowScroll();
